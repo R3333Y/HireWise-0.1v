@@ -1,3 +1,6 @@
+<?php
+$cssVersion = filemtime(__DIR__ . '/styles/styles.css');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HireWise | Seleccion inteligente de talento</title>
     <meta name="description" content="HireWise automatiza evaluaciones iniciales con IA, cuestionarios especializados y analisis de comportamiento para reclutamiento.">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css?v=<?php echo $cssVersion; ?>">
 </head>
 <body>
     <header class="site-header">
@@ -24,8 +27,8 @@
         </nav>
 
         <div class="header-actions">
-            <a href="#contacto" class="btn btn-ghost">Ingresar</a>
-            <a href="#contacto" class="btn btn-primary">Registro</a>
+            <a href="app/login.php" class="btn btn-ghost">Ingresar</a>
+            <a href="app/login.php" class="btn btn-primary">Registro</a>
         </div>
     </header>
 
